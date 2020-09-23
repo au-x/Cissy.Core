@@ -36,8 +36,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{17F304AB-DB52-41D8-8CBC-25D8A6D687A3}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
-		Web\antd-demo_v13.rar = Web\antd-demo_v13.rar
-		Web\antd-demo_v14.rar = Web\antd-demo_v14.rar
 	EndProjectSection
 EndProject
 Global
