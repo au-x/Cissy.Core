@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cissy.Swagger</name>
+    </assembly>
+    <members>
+        <member name="T:Cissy.Swagger.CissyApiAttribute">
+            <summary>
+            自定义路由 /api/{version=v1}/[controler]/[action]
+            </summary>
+        </member>
+        <member name="M:Cissy.Swagger.CissyApiAttribute.#ctor(System.String,System.String)">
+            <summary>
+            自定义路由构造函数
+            </summary>
+            <param name="actionName"></param>
+            <param name="version"></param>
+        </member>
+        <member name="P:Cissy.Swagger.CissyApiAttribute.GroupName">
+            <summary>
+            分组名称
+            </summary>
+        </member>
+        <member name="P:Cissy.Swagger.CissyApiAttribute.Description">
+            <summary>
+            接口描述
+            </summary>
+        </member>
+        <member name="M:Cissy.Swagger.DefaultControllerTagDescriptions.Apply(Microsoft.OpenApi.Models.OpenApiDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)">
+            <summary>
+            apply
+            </summary>
+            <param name="swaggerDoc"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:Cissy.Swagger.SwaggerConfig">
+            <summary>
+            swagger配置
+            </summary>
+        </member>
+        <member name="T:Cissy.Swagger.SwaggerConfigHelper">
+            <summary>
+            swagger配置帮助
+            </summary>
+        </member>
+    </members>
+</doc>
