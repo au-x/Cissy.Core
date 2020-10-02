@@ -55,8 +55,8 @@ namespace Cissy.Dapper
         void ClearCache();
         Guid GetNextGuid();
         IClassMapper GetMap<T>() where T : Cissy.Database.IEntity;
-        int ExecuteSql(DbConnection connection, string Sql, DbTransaction transaction, int? commandTimeout = null);
-        int ExecuteSql(DbConnection connection, string Sql, int? commandTimeout = null);
+        int ExecuteSql(string Sql, DbTransaction transaction, int? commandTimeout = null);
+        int ExecuteSql( string Sql, int? commandTimeout = null);
     }
 
     public class DB : IDatabase
@@ -317,11 +317,11 @@ namespace Cissy.Dapper
         {
             return _dapper.SqlGenerator.Configuration.GetMap<T>();
         }
-        public int ExecuteSql(DbConnection connection, string Sql, DbTransaction transaction, int? commandTimeout)
+        public int ExecuteSql( string Sql, DbTransaction transaction, int? commandTimeout)
         {
             return _dapper.ExecuteSql(Connection, Sql, transaction, commandTimeout);
         }
-        public int ExecuteSql(DbConnection connection, string Sql, int? commandTimeout)
+        public int ExecuteSql(string Sql, int? commandTimeout)
         {
             return _dapper.ExecuteSql(Connection, Sql, _transaction, commandTimeout);
         }
