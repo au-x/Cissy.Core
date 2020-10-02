@@ -46,7 +46,8 @@ namespace Cissy.Tools.Templates
             RegisterType("text", "string");
             RegisterType("mediumtext", "string");
             RegisterType("longtext", "string");
-            RegisterType("binary", "string");
+            RegisterType("binary", "byte[]");
+            RegisterType("varbinary", "byte[]");
 
             RegisterType("date", "DateTime");
             RegisterType("datetime", "DateTime");
@@ -57,6 +58,7 @@ namespace Cissy.Tools.Templates
             RegisterType("tinyblob", "byte[]");
             RegisterType("blob", "byte[]");
             RegisterType("mediumblob", "byte[]");
+            RegisterType("longblob", "byte[]");
             RegisterType("longtext", "byte[]");
         }
         static void RegisterType(string DataTypeName, string FieldTypeName)
