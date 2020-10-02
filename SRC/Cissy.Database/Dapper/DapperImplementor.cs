@@ -31,6 +31,7 @@ namespace Cissy.Dapper
         IEnumerable<T> GetSetCol<T>(DbConnection connection, Action<ColSelect<T>> ColSelector, object predicate, IList<ISort> sort, int firstResult, int maxResults, DbTransaction transaction, int? commandTimeout, bool buffered) where T : Cissy.Database.IEntity;
         int Count<T>(DbConnection connection, object predicate, DbTransaction transaction, int? commandTimeout) where T : Cissy.Database.IEntity;
         IMultipleResultReader GetMultiple(DbConnection connection, GetMultiplePredicate predicate, DbTransaction transaction, int? commandTimeout);
+        int ExecuteSql(DbConnection connection, string Sql, DbTransaction transaction, int? commandTimeout);
     }
 
     public class DapperImplementor : IDapperImplementor
@@ -525,6 +526,10 @@ namespace Cissy.Dapper
             }
 
             return new SequenceReaderResultReader(items);
+        }
+        public int ExecuteSql(DbConnection connection, string Sql, DbTransaction transaction, int? commandTimeout)
+        {
+            return connection.Execute(Sql, null, transaction, commandTimeout, CommandType.Text);
         }
     }
 }
